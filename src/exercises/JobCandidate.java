@@ -46,7 +46,7 @@ public class JobCandidate {
 
 	public String toString() {
 		return "\n" + this.name + " " + NumberFormat.getCurrencyInstance().format(this.salaryRequired)
-				+ (this.teacherName.contains("June") ? " learned from the best👌" : " learned somehow🤷");
+				+ (this.teacherName.contains("June") ? " learned from the best" : " learned somehow");
 	}
 
 	public String getTeacherName() {

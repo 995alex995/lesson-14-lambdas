@@ -1,6 +1,7 @@
 package exercises;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class _3_SolarSystem {
@@ -16,13 +17,12 @@ public class _3_SolarSystem {
 				);
 		
 
-		// 1: Sort the planets by distance from the sun
-		
-		// 2. Sort the planets in alphabetical order
-		
-		// 3. Sort planets from largest to smallest
-		
-
+		Collections.sort(planets, (planet1, planet2) -> planet2.getDistanceFromSun() - planet1.getDistanceFromSun());
+		System.out.println(planets);
+		planets.sort((planet1, planet2) -> planet1.getName().compareTo(planet2.getName()));
+		System.out.println(planets.toString());
+		Collections.sort(planets, (planet1, planet2) -> (int) planet2.getVolume() - (int) planet1.getVolume());
+		System.out.println(planets);
 	}
 
 }
